@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="icon" href="favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+</head>
+<body>
+  <header><div id="nav-placeholder"></div></header>
+  
+  <main>
+    <section class="frame">
+      <h1>My Work</h1>
+      <p class="work-text">Here are some of the projects and experiences that I have been involved in during my time at university and beyond.</p>
+
+      <div class="projects">
+        <div class="project-item">
+          <div class="project-icon">
+            <img src="./images/github-icon.png" alt="Project 1" class="project-img">
+            <strong>GitHub</strong>
+          </div>
+          <div class="project-text">
+            <a href="https://github.com/KhoiDang1209/AI-Shopping-System" target="_blank">AI Shopping System</a>
+            <p class="des-text">AI Shopping System is an e-commerce platform with personalized product recommendations based on user behavior.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-icon">
+            <img src="./images/github-icon.png" alt="Project " class="project-img">
+            <strong>GitHub</strong>
+          </div>
+          <div class="project-text">
+            <a href="https://github.com/ThiNVN/Data-Mining-Framework" target="_blank">Data Mining Framework</a>
+            <p class="des-text">Data Mining Framework is a Java project comparing different frameworks for performance and usability.</p>
+          </div>
+        </div>
+        
+        <div class="project-item">
+          <div class="project-icon">
+            <img src="./images/github-icon.png" alt="Project 3" class="project-img">
+            <strong>GitHub</strong>
+          </div>
+          <div class="project-text">
+            <a href="https://github.com/Theanh0410/TaskDatabase" target="_blank">Task Database</a>
+            <p class="des-text">Task Database is a Kanban-based app for organizing tasks and tracking progress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; The Anh</p>
+  </footer>
+  
+  <script>
+    fetch("nav.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("nav-placeholder").innerHTML = html))
+      .catch(err => console.error("Nav load failed:", err));
+  </script>
+</html>

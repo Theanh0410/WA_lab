@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="icon" href="favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+</head>
+<body>
+  <header><div id="nav-placeholder"></div></header>
+  
+  <main>
+    <section class="frame">
+      <h1>About Me</h1>
+      <p class="about-text">I am a fourth-year IT student at <a href="https://hcmiu.edu.vn/" target="_blank">Vietnam National University HCMC International University</a></p>
+
+      <h2>Interest</h2>
+      <div class="interests">
+        <div class="interest-item">
+          <div class="interest-icon">
+            <img src="./images/console-controller.png" alt="Game">
+            <strong>Game</strong>
+          </div>
+          <p>I enjoy playing and analyzing video games, exploring different genres, and understanding game mechanics.</p>
+        </div>
+        <div class="interest-item">
+          <div class="interest-icon">
+            <img src="./images/swimmer.png" alt="Sport">
+            <strong>Swimming</strong>
+          </div>
+          <p>Swimming helps me stay active and refreshed, providing a great balance between physical fitness and relaxation.</p>
+        </div>
+        <div class="interest-item">
+          <div class="interest-icon">
+            <img src="./images/icons8-aquarium-100.png" alt="Aquarium">
+            <strong>Aquarium</strong>
+          </div>
+          <p class="interest-text">I love observing and caring for aquatic life, as it brings a sense of peace and appreciation for marine ecosystems.</p>
+        </div>
+        <div class="interest-item">
+          <div class="interest-icon">
+            <img src="./images/book-bookmark.png" alt="Self-Learning">
+            <strong>Self-Learning</strong>
+          </div>
+          <p class="interest-text">I am passionate about continuous learning, constantly exploring new topics and skills beyond my university curriculum.</p>
+        </div>
+        <div class="interest-item">
+          <div class="interest-icon">
+            <img src="./images/blog.png" alt="Blog">
+            <strong>Blog</strong>
+          </div>
+          <p class="interest-text">Writing blogs allows me to share my thoughts, experiences, and knowledge with a broader audience.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; The Anh</p>
+  </footer>
+
+  <script>
+    fetch("nav.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("nav-placeholder").innerHTML = html))
+      .catch(err => console.error("Nav load failed:", err));
+  </script>
+</html>
