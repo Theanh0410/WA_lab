@@ -33,11 +33,22 @@
       </div>
 
       <form>
+        <h2>Send Me a Message</h2>
+
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="urgency">Urgency (1-10):<span id="urgency-value"></span></label>
+        <input type="range" id="urgency" name="urgency" min="1" max="10" value="5">
+
+        <label for="file">Attach File:</label>
+        <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.txt,.jpg,.png">
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="3" required></textarea>
